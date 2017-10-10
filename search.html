@@ -1,0 +1,942 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>搜索房源</title>
+    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_a9smis5d8v9uow29.css">
+    <script src="js/jquery.min.1.11.1.js"></script>
+    <script src="js/slideShow.js"></script>
+    <script src="js/JPlaceholder.js"></script>
+    <script src="js/index.js"></script> 
+    <script src="js/search.js"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container black">
+            <div class="header-icon f_left">
+                <a href="index.html"><img src="images/nav_logo.png" alt=""></a>
+            </div>
+            <div class="city f_left">
+                <span class="text">
+                    <span>北京</span>
+                    <i class="iconfont icon-arrow-down"></i>
+                </span>
+                <div class="info">
+                    <ul>
+                        <li><a href="###">北京</a></li>
+                        <li><a href="###">上海</a></li>
+                        <li><a href="###">广州</a></li>
+                        <li><a href="###">深圳</a></li>
+                        <li><a href="###">杭州</a></li>
+                        <li><a href="###">西安</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="search">
+                <form action="#" class="form-search">
+                    <i class="iconfont icon-fangdajing"></i>
+                    <input type="text" class="search-box" placeholder="请输入大厦名称或区域位置">
+                </form>
+            </div>
+            <div class="nav f_right">
+                <a href="requirement.html">委托找房</a>
+                <a href="fangyuan.html">投放房源</a>
+                <a href="gift.html">企业礼包</a>
+                <a href="###">
+                    <i  class="login">登录</i>
+                </a>
+                <a href="###" class="last">
+                    <i class="iconfont icon-dianhua"></i>
+                    <span class="phone">40000-40-400</span>
+                </a>
+            </div>
+        </div>
+        <div class="dialog-login">
+            <div class="content">
+                <h1>快捷登录</h1>
+                <h2>登录享受更多一起租服务</h2>
+                <form action="##">
+                    <input type="text" class="login-phone" placeholder="手机号码">
+                    <div class="form-vertify">
+                        <input type="text" class="login-vertiy" placeholder="验证码">
+                        <a href="###">获取验证码</a>
+                    </div>
+                    <input type="submit" class="login-btn" value="确定">
+                </form>
+            </div>
+            <a class="close iconfont icon-jiaocha" href="###"></a>
+        </div>
+    </div>
+    <div class="login-mask"></div>
+
+    <div id="main" class="clearfix">
+       <div class="search">
+            <div class="search-box">
+                <div class="top-bar">
+                    <ul class="buildingType f_left">
+                        <li><a href="###" class="active">全部类型</a></li>
+                        <li><a href="###">写字楼</a></li>
+                        <li><a href="###">联合办公</a></li>
+                        <li><a href="###">工位</a></li>
+                    </ul>
+                </div>
+                <div class="list list1" style="display:block;">
+                    <div class="search-item search-area">
+                        <div class="left f_left">位置</div>
+                        <div class="right f_left">
+                            <div class="level1">
+                                <a href="###" class="item-a active">
+                                    区域
+                                    <i class="arrow"></i>
+                                </a>
+                                <a href="###" class="item-a">
+                                    地铁线
+                                    <i class="arrow"></i>
+                                </a>
+                            </div>
+                            <div  class="level2">
+                                <ul>
+                                    <li><a href="###" class="active">全市区域</a></li>
+                                    <li><a href="###">朝阳</a></li>
+                                    <li><a href="###">海淀</a></li>
+                                    <li><a href="###">东城</a></li>
+                                    <li><a href="###">西城</a></li>
+                                    <li><a href="###">丰台</a></li>
+                                    <li><a href="###">宣武</a></li>
+                                    <li><a href="###">大兴</a></li>
+                                    <li><a href="###">昌平</a></li>
+                                    <li><a href="###">石景山</a></li>
+                                    <li><a href="###">通州</a></li>
+                                    <li><a href="###">顺义</a></li>
+                                    <li><a href="###">近郊</a></li>
+                                    <li><a href="###">周边</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="search-item mj">
+                        <div class="left f_left">面积</div>
+                        <div class="right f_left">
+                            <div  class="level2 pdnone">
+                                <ul>
+                                    <li><a href="###" class="active">面积不限</a></li>
+                                    <li><a href="###">100m²以下</a></li>
+                                    <li><a href="###">100-200m²</a></li>
+                                    <li><a href="###">200-300m²</a></li>
+                                    <li><a href="###">300-500m²</a></li>
+                                    <li><a href="###">500-1000m²</a></li>
+                                    <li><a href="###">1000m²以上</a></li>
+                                    <li class="count">
+                                        <em>-</em>
+                                        <input type="text" class="min">
+                                        <input type="text" class="max">
+                                    </li>
+                                    <i class="unit">人</i>
+                                    <input type="button" class="btn-confirm" value="确认">
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="search-item search-price">
+                        <div class="left f_left">价格</div>
+                        <div class="right f_left">
+                            <div class="level1">
+                                <a href="###" class="item-a active">
+                                    单价
+                                    <i class="arrow"></i>
+                                </a>
+                                <a href="###" class="item-a">
+                                    总价
+                                    <i class="arrow"></i>
+                                </a>
+                            </div>
+                            <div  class="level2">
+                                <ul>
+                                    <li><a href="###" class="active">单价不限</a></li>
+                                    <li><a href="###">3元以下</a></li>
+                                    <li><a href="###">3-4元</a></li>
+                                    <li><a href="###">4-5元</a></li>
+                                    <li><a href="###">5-7元</a></li>
+                                    <li><a href="###">7-9元</a></li>
+                                    <li><a href="###">9-12元</a></li>
+                                    <li><a href="###">12元以上</a></li>
+                                     <li class="count">
+                                        <em>-</em>
+                                        <input type="text" class="min">
+                                        <input type="text" class="max">
+                                    </li>
+                                    <i class="unit">元</i>
+                                    <input type="button" class="btn-confirm" value="确认">
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="list list2">
+                    <div class="search-item search-area">
+                        <div class="left f_left">位置</div>
+                        <div class="right f_left">
+                            <div class="level1">
+                                <a href="###" class="item-a active">
+                                    区域
+                                    <i class="arrow"></i>
+                                </a>
+                                <a href="###" class="item-a">
+                                    地铁线
+                                    <i class="arrow"></i>
+                                </a>
+                            </div>
+                            <div  class="level2">
+                                <ul>
+                                    <li><a href="###" class="active">全市区域</a></li>
+                                    <li><a href="###">朝阳</a></li>
+                                    <li><a href="###">海淀</a></li>
+                                    <li><a href="###">东城</a></li>
+                                    <li><a href="###">西城</a></li>
+                                    <li><a href="###">丰台</a></li>
+                                    <li><a href="###">宣武</a></li>
+                                    <li><a href="###">大兴</a></li>
+                                    <li><a href="###">昌平</a></li>
+                                    <li><a href="###">石景山</a></li>
+                                    <li><a href="###">通州</a></li>
+                                    <li><a href="###">顺义</a></li>
+                                    <li><a href="###">近郊</a></li>
+                                    <li><a href="###">周边</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="search-item mj">
+                        <div class="left f_left">面积</div>
+                        <div class="right f_left">
+                            <div  class="level2 pdnone">
+                                <ul>
+                                    <li><a href="###" class="active">面积不限</a></li>
+                                    <li><a href="###">100m²以下</a></li>
+                                    <li><a href="###">100-200m²</a></li>
+                                    <li><a href="###">200-300m²</a></li>
+                                    <li><a href="###">300-500m²</a></li>
+                                    <li><a href="###">500-1000m²</a></li>
+                                    <li><a href="###">1000m²以上</a></li>
+                                    <li class="count">
+                                        <em>-</em>
+                                        <input type="text" class="min">
+                                        <input type="text" class="max">
+                                    </li>
+                                    <i class="unit">人</i>
+                                    <input type="button" class="btn-confirm" value="确认">
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="search-item search-price">
+                        <div class="left f_left">价格</div>
+                        <div class="right f_left">
+                            <div class="level1">
+                                <a href="###" class="item-a active">
+                                    单价
+                                    <i class="arrow"></i>
+                                </a>
+                                <a href="###" class="item-a">
+                                    总价
+                                    <i class="arrow"></i>
+                                </a>
+                            </div>
+                            <div  class="level2">
+                                <ul>
+                                    <li><a href="###" class="active">单价不限</a></li>
+                                    <li><a href="###">3元以下</a></li>
+                                    <li><a href="###">3-4元</a></li>
+                                    <li><a href="###">4-5元</a></li>
+                                    <li><a href="###">5-7元</a></li>
+                                    <li><a href="###">7-9元</a></li>
+                                    <li><a href="###">9-12元</a></li>
+                                    <li><a href="###">12元以上</a></li>
+                                     <li class="count">
+                                        <em>-</em>
+                                        <input type="text" class="min">
+                                        <input type="text" class="max">
+                                    </li>
+                                    <i class="unit">元</i>
+                                    <input type="button" class="btn-confirm" value="确认">
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="search-item type">
+                        <div class="left f_left">装修</div>
+                        <div class="right f_left">
+                            <div  class="level2 pdnone">
+                                <ul>
+                                    <li><a href="###" class="active">装修不限</a></li>
+                                    <li><a href="###">豪装</a></li>
+                                    <li><a href="###">精装</a></li>
+                                    <li><a href="###">简装</a></li>
+                                    <li><a href="###">毛坯</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="list list3">
+                    <div class="search-item search-area">
+                        <div class="left f_left">位置</div>
+                        <div class="right f_left">
+                            <div class="level1">
+                                <a href="###" class="item-a active">
+                                    区域
+                                    <i class="arrow"></i>
+                                </a>
+                                <a href="###" class="item-a">
+                                    地铁线
+                                    <i class="arrow"></i>
+                                </a>
+                            </div>
+                            <div  class="level2">
+                                <ul>
+                                    <li><a href="###" class="active">全市区域</a></li>
+                                    <li><a href="###">朝阳</a></li>
+                                    <li><a href="###">海淀</a></li>
+                                    <li><a href="###">东城</a></li>
+                                    <li><a href="###">西城</a></li>
+                                    <li><a href="###">丰台</a></li>
+                                    <li><a href="###">宣武</a></li>
+                                    <li><a href="###">大兴</a></li>
+                                    <li><a href="###">昌平</a></li>
+                                    <li><a href="###">石景山</a></li>
+                                    <li><a href="###">通州</a></li>
+                                    <li><a href="###">顺义</a></li>
+                                    <li><a href="###">近郊</a></li>
+                                    <li><a href="###">周边</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="search-item mj">
+                        <div class="left f_left">面积</div>
+                        <div class="right f_left">
+                            <div  class="level2 pdnone">
+                                <ul>
+                                    <li><a href="###" class="active">面积不限</a></li>
+                                    <li><a href="###">100m²以下</a></li>
+                                    <li><a href="###">100-200m²</a></li>
+                                    <li><a href="###">200-300m²</a></li>
+                                    <li><a href="###">300-500m²</a></li>
+                                    <li><a href="###">500-1000m²</a></li>
+                                    <li><a href="###">1000m²以上</a></li>
+                                    <li class="count">
+                                        <em>-</em>
+                                        <input type="text" class="min">
+                                        <input type="text" class="max">
+                                    </li>
+                                    <i class="unit">人</i>
+                                    <input type="button" class="btn-confirm" value="确认">
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="search-item search-price">
+                        <div class="left f_left">价格</div>
+                        <div class="right f_left">
+                            <div class="level1">
+                                <a href="###" class="item-a active">
+                                    单价
+                                    <i class="arrow"></i>
+                                </a>
+                                <a href="###" class="item-a">
+                                    总价
+                                    <i class="arrow"></i>
+                                </a>
+                            </div>
+                            <div  class="level2">
+                                <ul>
+                                    <li><a href="###" class="active">单价不限</a></li>
+                                    <li><a href="###">3元以下</a></li>
+                                    <li><a href="###">3-4元</a></li>
+                                    <li><a href="###">4-5元</a></li>
+                                    <li><a href="###">5-7元</a></li>
+                                    <li><a href="###">7-9元</a></li>
+                                    <li><a href="###">9-12元</a></li>
+                                    <li><a href="###">12元以上</a></li>
+                                     <li class="count">
+                                        <em>-</em>
+                                        <input type="text" class="min">
+                                        <input type="text" class="max">
+                                    </li>
+                                    <i class="unit">元</i>
+                                    <input type="button" class="btn-confirm" value="确认">
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="list list4">
+                    <div class="search-item search-area">
+                        <div class="left f_left">位置</div>
+                        <div class="right f_left">
+                            <div class="level1">
+                                <a href="###" class="item-a active">
+                                    区域
+                                    <i class="arrow"></i>
+                                </a>
+                                <a href="###" class="item-a">
+                                    地铁线
+                                    <i class="arrow"></i>
+                                </a>
+                            </div>
+                            <div  class="level2">
+                                <ul>
+                                    <li><a href="###" class="active">全市区域</a></li>
+                                    <li><a href="###">朝阳</a></li>
+                                    <li><a href="###">海淀</a></li>
+                                    <li><a href="###">东城</a></li>
+                                    <li><a href="###">西城</a></li>
+                                    <li><a href="###">丰台</a></li>
+                                    <li><a href="###">宣武</a></li>
+                                    <li><a href="###">大兴</a></li>
+                                    <li><a href="###">昌平</a></li>
+                                    <li><a href="###">石景山</a></li>
+                                    <li><a href="###">通州</a></li>
+                                    <li><a href="###">顺义</a></li>
+                                    <li><a href="###">近郊</a></li>
+                                    <li><a href="###">周边</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="search-item mj">
+                        <div class="left f_left">面积</div>
+                        <div class="right f_left">
+                            <div  class="level2 pdnone">
+                                <ul>
+                                    <li><a href="###" class="active">面积不限</a></li>
+                                    <li><a href="###">100m²以下</a></li>
+                                    <li><a href="###">100-200m²</a></li>
+                                    <li><a href="###">200-300m²</a></li>
+                                    <li><a href="###">300-500m²</a></li>
+                                    <li><a href="###">500-1000m²</a></li>
+                                    <li><a href="###">1000m²以上</a></li>
+                                    <li class="count">
+                                        <em>-</em>
+                                        <input type="text" class="min">
+                                        <input type="text" class="max">
+                                    </li>
+                                    <i class="unit">人</i>
+                                    <input type="button" class="btn-confirm" value="确认">
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="search-item search-price">
+                        <div class="left f_left">价格</div>
+                        <div class="right f_left">
+                            <div class="level1">
+                                <a href="###" class="item-a active">
+                                    单价
+                                    <i class="arrow"></i>
+                                </a>
+                                <a href="###" class="item-a">
+                                    总价
+                                    <i class="arrow"></i>
+                                </a>
+                            </div>
+                            <div  class="level2">
+                                <ul>
+                                    <li><a href="###" class="active">单价不限</a></li>
+                                    <li><a href="###">3元以下</a></li>
+                                    <li><a href="###">3-4元</a></li>
+                                    <li><a href="###">4-5元</a></li>
+                                    <li><a href="###">5-7元</a></li>
+                                    <li><a href="###">7-9元</a></li>
+                                    <li><a href="###">9-12元</a></li>
+                                    <li><a href="###">12元以上</a></li>
+                                     <li class="count">
+                                        <em>-</em>
+                                        <input type="text" class="min">
+                                        <input type="text" class="max">
+                                    </li>
+                                    <i class="unit">元</i>
+                                    <input type="button" class="btn-confirm" value="确认">
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="search-item type">
+                        <div class="left f_left">装修</div>
+                        <div class="right f_left">
+                            <div  class="level2 pdnone">
+                                <ul>
+                                    <li><a href="###" class="active">装修不限</a></li>
+                                    <li><a href="###">豪装</a></li>
+                                    <li><a href="###">精装</a></li>
+                                    <li><a href="###">简装</a></li>
+                                    <li><a href="###">毛坯</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </div>
+
+       <div class="listing f_left">
+            <div class="listing-content">
+                <div class="list f_left">
+                    <div class="list-top">
+                        <div class="select-item">
+                            <h2>100-200m²</h2>
+                            <a href="###" class="iconfont"></a>
+                        </div>
+                        <div class="item-sort f_right">
+                            <a href="###" class="active">综合排序</a>
+                        </div>
+                    </div>
+                    <div class="list-main">
+                        <ul>
+                            <li class="list-item">
+                                <a href="detail.html" class="f_left"><img src="images/beijing1.jpg" alt=""></a>
+                                <div class="info f_right">
+                                    <div class="part1">
+                                        <h2><a href="###">36氪空间</a></h2>
+                                        <span class="price-unit">元/月</span>
+                                        <span class="price-num">50400</span>
+                                        
+                                    </div>
+                                    <div class="part2">
+                                        <i class="iconfont icon-ditu1"></i>
+                                        <span>朝阳</span>
+                                        -
+                                        <span>望京</span>
+                                    </div>
+                                    <div class="part3">
+                                        <i class="iconfont icon-iconfontshuju"></i>
+                                        <span class="update">2016年11月18日有户型更新</span>
+                                        <span class="order"> · 近30天内共有21人预约</span>
+                                    </div>
+                                    <div class="part4">
+                                        <ul class="house-list">
+                                            <li><a href="###">120m²</a></li>
+                                        </ul>
+                                    </div>
+                                    <a href="detail.html" class="list-detail">查看详情</a>
+                                </div>
+                            </li>
+                            <li class="list-item">
+                                <a href="detail.html" class="f_left"><img src="images/beijing2.jpg" alt=""></a>
+                                <div class="info f_right">
+                                    <div class="part1">
+                                        <h2><a href="###">华贸中心</a></h2>
+                                        <span class="price-unit">元/m²/天</span>
+                                        <span class="price-num">7.3</span>
+                                        
+                                    </div>
+                                    <div class="part2">
+                                        <i class="iconfont icon-ditu1"></i>
+                                        <span>朝阳</span>
+                                        -
+                                        <span>大望路</span>
+                                    </div>
+                                    <div class="part3">
+                                        <i class="iconfont icon-iconfontshuju"></i>
+                                        <span class="update">2016年9月9日有户型更新</span>
+                                        <span class="order"> · 近30天内共有32人预约</span>
+                                    </div>
+                                    <div class="part4">
+                                        <ul class="house-list">
+                                            <li><a href="###">133m²</a></li>
+                                        </ul>
+                                    </div>
+                                    <a href="detail.html" class="list-detail">查看详情</a>
+                                </div>
+                            </li>
+                            <li class="list-item">
+                                <a href="detail.htmll" class="f_left"><img src="images/beijing3.jpg" alt=""></a>
+                                <div class="info f_right">
+                                    <div class="part1">
+                                        <h2><a href="###">SOHO3Q-光华路SOHO二期</a></h2>
+                                        <span class="price-unit">元/m²/天</span>
+                                        <span class="price-num">3.45</span>
+                                        
+                                    </div>
+                                    <div class="part2">
+                                        <i class="iconfont icon-ditu1"></i>
+                                        <span>朝阳</span>
+                                        -
+                                        <span>大望路</span>
+                                    </div>
+                                    <div class="part3">
+                                        <i class="iconfont icon-iconfontshuju"></i>
+                                        <span class="update">2016年11月11日有户型更新</span>
+                                        <span class="order"> · 近30天内共有19人预约</span>
+                                    </div>
+                                    <div class="part4">
+                                        <ul class="house-list">
+                                            <li><a href="###">133m²</a></li>
+                                        </ul>
+                                    </div>
+                                    <a href="detail.html" class="list-detail">查看详情</a>
+                                </div>
+                            </li>
+                            <li class="list-item">
+                                <a href="detail.html" class="f_left"><img src="images/beijing4.jpg" alt=""></a>
+                                <div class="info f_right">
+                                    <div class="part1">
+                                        <h2><a href="###">SOHO现代城</a></h2>
+                                        <span class="price-unit">元/m²/天</span>
+                                        <span class="price-num">7.3</span>
+                                        
+                                    </div>
+                                    <div class="part2">
+                                        <i class="iconfont icon-ditu1"></i>
+                                        <span>朝阳</span>
+                                        -
+                                        <span>大望路</span>
+                                    </div>
+                                    <div class="part3">
+                                        <i class="iconfont icon-iconfontshuju"></i>
+                                        <span class="update">2016年9月9日有户型更新</span>
+                                        <span class="order"> · 近30天内共有32人预约</span>
+                                    </div>
+                                    <div class="part4">
+                                        <ul class="house-list">
+                                            <li><a href="###">133m²</a></li>
+                                        </ul>
+                                    </div>
+                                    <a href="detail.html" class="list-detail">查看详情</a>
+                                </div>
+                            </li>
+                            <li class="list-item">
+                                <a href="detail.html" class="f_left"><img src="images/beijing5.jpg" alt=""></a>
+                                <div class="info f_right">
+                                    <div class="part1">
+                                        <h2><a href="###">比目鱼创业园</a></h2>
+                                        <span class="price-unit">元/m²/天</span>
+                                        <span class="price-num">2.2</span>
+                                        
+                                    </div>
+                                    <div class="part2">
+                                        <i class="iconfont icon-ditu1"></i>
+                                        <span>朝阳</span>
+                                        -
+                                        <span>望京</span>
+                                    </div>
+                                    <div class="part3">
+                                        <i class="iconfont icon-iconfontshuju"></i>
+                                        <span class="update">2016年9月9日有户型更新</span>
+                                        <span class="order"> · 近30天内共有16人预约</span>
+                                    </div>
+                                    <div class="part4">
+                                        <ul class="house-list">
+                                            <li><a href="###">100m²</a></li>
+                                        </ul>
+                                    </div>
+                                    <a href="detail.html" class="list-detail">查看详情</a>
+                                </div>
+                            </li>
+                            <li class="list-item">
+                                <a href="detail.html" class="f_left"><img src="images/beijing6.jpg" alt=""></a>
+                                <div class="info f_right">
+                                    <div class="part1">
+                                        <h2><a href="###">望京SOHO</a></h2>
+                                        <span class="price-unit">元/m²/天</span>
+                                        <span class="price-num">4.69</span>
+                                        
+                                    </div>
+                                    <div class="part2">
+                                        <i class="iconfont icon-ditu1"></i>
+                                        <span>朝阳</span>
+                                        -
+                                        <span>大望路</span>
+                                    </div>
+                                    <div class="part3">
+                                        <i class="iconfont icon-iconfontshuju"></i>
+                                        <span class="update">2016年9月9日有户型更新</span>
+                                        <span class="order"> · 近30天内共有12人预约</span>
+                                    </div>
+                                    <div class="part4">
+                                        <ul class="house-list">
+                                            <li><a href="###">103m²</a></li>
+                                        </ul>
+                                    </div>
+                                    <a href="detail.html" class="list-detail">查看详情</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="list-bottom">
+                        <div class="pos f_left">
+                            <a href="###">热门房源</a>
+                        </div>
+                        <div class="page f_right">
+                            <ul>
+                                <li><a href="###" class="active">1</a></li>
+                                <li><a href="###">2</a></li>
+                                <li><a href="###">3</a></li>
+                                <li><a href="###">4</a></li>
+                                <li><a href="###">5</a></li>
+                                <li><a href="###">6</a></li>
+                                <li><a href="###">7</a></li>
+                                <li><a href="###">8</a></li>   
+                            </ul>
+                            <a href="###" class="next">下一页</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="operation f_right">
+                    <div class="oper-box">
+                        <h3 class="layer">地图找房</h3>
+                        <div class="map-guide">
+                            <p>
+                                <span>北京</span>
+                                <br>
+                                <span>有 2224 套办公室</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="oper-box">
+                        <h3 class="layer">委托找房</h3>
+                        <div class="recom-txt">10分钟快速响应，已有 18393 人提交申请</div>
+                        <a href="###" class="weituo">立即委托</a>
+                    </div>
+                    <div class="oper-box oper-box-hot">
+                        <h3 class="layer">热门户型</h3>
+                        <div class="hot-house">
+                            <ul>
+                                <li>
+                                    <div class="hot-house-img f_left">
+                                        <img src="images/hot-house1.jpg" alt="">
+                                    </div>
+                                    <div class="hot-house-info f_left">
+                                        <p class="hot-area">146m² · 简装</p>
+                                        <p class="hot-building">国门大厦</p>
+                                        <p class="hot-price">8 元/m²/天</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="hot-house-img f_left">
+                                        <img src="images/hot-house2.jpg" alt="">
+                                    </div>
+                                    <div class="hot-house-info f_left">
+                                        <p class="hot-area">150m² · 精装</p>
+                                        <p class="hot-building">朝阳大悦城</p>
+                                        <p class="hot-price">5.59 元/m²/天</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="hot-house-img f_left">
+                                        <img src="images/hot-house3.jpg" alt="">
+                                    </div>
+                                    <div class="hot-house-info f_left">
+                                        <p class="hot-area">135m² · 简装</p>
+                                        <p class="hot-building">建外soho</p>
+                                        <p class="hot-price">4.87 元/m²/天</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="hot-house-img f_left">
+                                        <img src="images/hot-house4.jpg" alt="">
+                                    </div>
+                                    <div class="hot-house-info f_left">
+                                        <p class="hot-area">160m² · 精装</p>
+                                        <p class="hot-building">卓明大厦</p>
+                                        <p class="hot-price">5 元/m²/天</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="hot-house-img f_left">
+                                        <img src="images/hot-house5.jpg" alt="">
+                                    </div>
+                                    <div class="hot-house-info f_left">
+                                        <p class="hot-area">103m² · 简装</p>
+                                        <p class="hot-building">太阳宫商务楼</p>
+                                        <p class="hot-price">6 元/m²/天</p>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="oper-box oper-box-hot">
+                        <h3 class="layer">热门大夏</h3>
+                        <div class="hot-house">
+                            <ul>
+                                <li>
+                                    <div class="hot-house-img f_left">
+                                        <img src="images/hot-building1.jpg" alt="">
+                                    </div>
+                                    <div class="hot-house-info f_left">
+                                        <p class="hot-area">宝能中心</p>
+                                        <p class="hot-building">近30天有 5 人预约</p>
+                                        <p class="hot-price">8.5 元/m²/天</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="hot-house-img f_left">
+                                        <img src="images/hot-building2.jpg" alt="">
+                                    </div>
+                                    <div class="hot-house-info f_left">
+                                        <p class="hot-area">方恒国际中心</p>
+                                        <p class="hot-building">近30天有 12 人预约</p>
+                                        <p class="hot-price">4.69 元/m²/天</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="hot-house-img f_left">
+                                        <img src="images/hot-building3.jpg" alt="">
+                                    </div>
+                                    <div class="hot-house-info f_left">
+                                        <p class="hot-area">诚盈中心</p>
+                                        <p class="hot-building">近30天有 8 人预约</p>
+                                        <p class="hot-price">6.5 元/m²/天</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="hot-house-img f_left">
+                                        <img src="images/hot-building4.jpg" alt="">
+                                    </div>
+                                    <div class="hot-house-info f_left">
+                                        <p class="hot-area">浦项中心</p>
+                                        <p class="hot-building">近30天有 8 人预约</p>
+                                        <p class="hot-price">8.8 元/m²/天</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="hot-house-img f_left">
+                                        <img src="images/hot-building5.jpg" alt="">
+                                    </div>
+                                    <div class="hot-house-info f_left">
+                                        <p class="hot-area">望京SOHO</p>
+                                        <p class="hot-building">近30天有 12 人预约</p>
+                                        <p class="hot-price">7.22 元/m²/天</p>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="clearfix"></div>
+
+        <div class="footer">
+            <div class="keyword">
+                <div class="container">
+                    <a class="hot" href="###">热门写字楼：</a>
+                    <ul>
+                        <li><a href="###">卫通大厦</a></li>
+                        <li><a href="###">宝能中心</a></li>
+                        <li><a href="###">大恒科技大厦</a></li>
+                        <li><a href="###">方恒国际中心</a></li>
+                        <li><a href="###">诚盈中心</a></li>
+                        <li><a href="###">浦项中心</a></li>
+                        <li><a href="###">望京SOHO</a></li>
+                        <li><a href="###">SOHO3Q-望京SOHO</a></li>
+                        <li><a href="###">36氪空间</a></li>
+                        <li><a href="###">2049文创园</a></li>
+                        <li><a href="###">住邦2000</a></li>
+                        <li><a href="###">SOHO现代城</a></li>
+                        <li><a href="###">霄云中心</a></li>
+                    </ul>
+                    <a class="link" href="##">+ 展开</a>
+                </div>
+            </div>
+            <div class="content">
+                <div class="copyright f_left">
+                    <a class="logo" href="###"><img src="images/footer_logo_ddz.png" alt=""></a>
+                    <p>© 2014-2016</p>
+                    <p>网络科技有限公司</p>
+                    <p> All Rights Reserved.</p>
+                    <p class="beian">粤ICP备10000号</p>
+                    <a class="gov" href="###"><img src="images/govIcon.gif" alt="""></a>
+                </div>
+                <div class="service f_right">
+                    <p class="title">客服服务</p>
+                    <div class="info">
+                        <span class="tel">40000-40-400</span>
+                        <span>( 早9:00-晚10:00 )</span>
+                        <p>support@yiqizu.com</p>
+                        <img src="images/footer_qrcode.png" alt="">
+                    </div>
+                </div>
+                <div class="link f_right">
+                    <div class="box">
+                        <div class="top">
+                            <a href="###" class="top current">友情链接</a>
+                            <a href="###" class="top">热门办公室出租</a>
+                            <a href="###" class="top">热门写字楼出租</a>
+                            <a href="###" class="top noright">热门商务中心出租</a>
+                        </div>
+                        <div class="bottom">
+                            <a href="###">北京办公室出租</a>
+                            <a href="###">上海办公室出租</a>
+                            <a href="###">广州办公室出租</a>
+                            <a href="###">深圳办公室出租</a>
+                            <a href="###">杭州办公室出租</a>
+                            <a href="###">黄山买房</a>
+                            <a href="###">安庆房产网</a>
+                            <a href="###">温州装修网</a>
+                            <a href="###">北京租房</a>
+                            <a href="###">苏州房产网</a>
+                            <a href="###">个人房源网</a>
+                            <a href="###">海宁装修网</a>
+                            <a href="###">北京别墅</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="about f_right">
+                    <p>关于一起租</p>
+                    <a href="###">关于我们</a>
+                    <a href="###">团队招聘</a>
+                    <a href="###">商务合作</a>
+                    <a href="###">常见问题</a>
+                    <a href="###">条款与隐私</a>
+                    <a href="###">新闻资讯</a>
+                    <a href="###">网站地图</a>
+                    <a href="###">热门搜索词</a>
+                </div>                   
+            </div>
+        </div>
+    </div>
+
+    <div class="slide-bar">
+        <div class="container">
+            <div class="fav"></div>
+            <div class="line"></div>
+            <div class="weixin">
+                <div class="info">
+                    <a href=""><img src="images/qr_code.jpg" alt=""></a>
+                    <p>扫码关注一起租</p>
+                </div>
+            </div>
+            <div class="phone">
+                <div class="info">
+                    <p>客服电话 ( 早9:00-晚10:00 ) </p>
+                    <span>40000-40-400</span>
+                </div>
+            </div>
+        </div>
+        <div class="gotop"></div>
+    </div>
+
+    <div class="online">
+        <a href="###"><img src="images/contact.png" alt=""></a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,564 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>房源详细内容</title>
+    <link rel="stylesheet" href="css/detail.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_a9smis5d8v9uow29.css">
+    <script src="js/jquery.min.1.11.1.js"></script>
+    <script src="js/jquery.SuperSlide.2.1.1.js"></script>
+    <script src="js/index.js"></script> 
+    <script src="js/detail.js"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container black">
+            <div class="header-icon f_left">
+                <a href="index.html"><img src="images/nav_logo.png" alt=""></a>
+            </div>
+            <div class="city f_left">
+                <span class="text">
+                    <span>北京</span>
+                    <i class="iconfont icon-arrow-down"></i>
+                </span>
+                <div class="info">
+                    <ul>
+                        <li><a href="###">北京</a></li>
+                        <li><a href="###">上海</a></li>
+                        <li><a href="###">广州</a></li>
+                        <li><a href="###">深圳</a></li>
+                        <li><a href="###">杭州</a></li>
+                        <li><a href="###">西安</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="search">
+                <form action="#" class="form-search">
+                    <i class="iconfont icon-fangdajing"></i>
+                    <input type="text" class="search-box" placeholder="请输入大厦名称或区域位置">
+                </form>
+            </div>
+            <div class="nav f_right">
+                <a href="requirement.html">委托找房</a>
+                <a href="fangyuan.html">投放房源</a>
+                <a href="gift.html">企业礼包</a>
+                <a href="###">
+                    <i  class="login">登录</i>
+                </a>
+                <a href="###" class="last">
+                    <i class="iconfont icon-dianhua"></i>
+                    <span class="phone">40000-40-400</span>
+                </a>
+            </div>
+        </div>
+        <div class="dialog-login">
+            <div class="content">
+                <h1>快捷登录</h1>
+                <h2>登录享受更多一起租服务</h2>
+                <form action="##">
+                    <input type="text" class="login-phone" placeholder="手机号码">
+                    <div class="form-vertify">
+                        <input type="text" class="login-vertiy" placeholder="验证码">
+                        <a href="###">获取验证码</a>
+                    </div>
+                    <input type="submit" class="login-btn" value="确定">
+                </form>
+            </div>
+            <a class="close iconfont icon-jiaocha" href="###"></a>
+        </div>
+    </div>
+    <div class="login-mask"></div>
+
+    <div id="main" class="clearfix">
+       <div class="detail">
+            <div class="detail-wrap">
+                <div class="top-wrap">
+                    <div class="top-nav">
+                        <a href="###">北京一起租</a>
+                        >
+                        <a href="###">朝阳写字楼出租</a>
+                        >
+                        <a href="###">望京写字楼出租</a>
+                        > 36氪空间
+                    </div>
+                    <div class="top-title">
+                        <div class="building-name f_left">
+                            <h1>36氪空间</h1>
+                        </div>
+                        <div class="building-price f_right">
+                            <span class="price-num">1900~334583</span>
+                             元/月
+                        </div>
+                    </div>
+                    <p class="area-location">
+                        <i class="iconfont icon-ditu1"></i>
+                        <a href="###">北京市</a>
+                        -
+                        <a href="###">朝阳区</a>
+                    </p>
+                    <p class="area-update">
+                        <i class="iconfont icon-iconfontshuju"></i>
+                        11小时前有户型更新 · 近30天内共有21人预约
+                    </p>
+                    <div class="top-banner">
+                        <div class="imgs-banner f_left">
+                            <img src="images/top-banner1.jpg" alt="">
+                            <div class="banner-mask hide"></div>
+                            <p class="banner-tip hide">查看所有5张照片</p>
+                        </div>
+                        <div class="building-pos f_right">
+                            <a href="###"><img src="images/building-pos.jpg" alt=""></a>
+                        </div>
+                    </div>
+                </div>      
+            </div> 
+
+            <div class="photo-window" style="visibility:hidden;">
+                <div class="photo-close"><i class="iconfont icon-guanbi"></i></div>
+                <div class="photo-box">
+                    <ul class="photo-list">
+                        <li><img src="images/jintai_1.jpg" alt=""></li>
+                        <li><img src="images/jintai_2.jpg" alt=""></li>
+                        <li><img src="images/jintai_3.jpg" alt=""></li>
+                        <li><img src="images/jintai_4.jpg" alt=""></li>
+                        <li><img src="images/jintai_5.jpg" alt=""></li>
+                    </ul>
+                    <a href="javascript:;" class="prev iconfont icon-jiantou"></a>
+                    <a href="javascript:;" class="next iconfont icon-miaosha"></a>
+                </div>
+            </div>
+
+            <div class="house-content">
+                <div class="content-wrap">
+                    <div class="left-box house-box f_left">
+                        <div class="house-bar">
+                            <ul class="type">
+                                <li class="active">
+                                    <span class="title">符合条件户型</span>
+                                    <span class="desc">100-200m²</span>
+                                </li>
+                                <li>
+                                    <span class="title">单人卡位</span>
+                                    <span class="desc">2套</span>
+                                </li>
+                                <li>
+                                    <span class="title">2-3人</span>
+                                    <span class="desc">2套</span>
+                                </li>
+                                <li>
+                                    <span class="title">7-10人</span>
+                                    <span class="desc">1套</span>
+                                </li>
+                                <li>
+                                    <span class="title">11-15人</span>
+                                    <span class="desc">2套</span>
+                                </li>
+                                <li>
+                                    <span class="title">16人以上</span>
+                                    <span class="desc">3套</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="house-list">
+                            <h3>户型列表</h3>
+                            <ul class="nav">
+                                <li class="photo">照片</li>
+                                <li>面积</li>
+                                <li>人数</li>
+                                <li>总价</li>
+                                <li>更新</li>
+                            </ul>
+                            <div class="content">
+                                <ul class="list">
+                                    <li class="item">
+                                        <p class="photo"><img src="images/img_preparing.jpg" alt=""></p>
+                                        <p class="area">
+                                            <span class="area-num">120</span>
+                                            <span class="area-unit">m²</span>
+                                        </p>
+                                        <p class="pnum">22-27人</p>
+                                        <p class="price">
+                                            <span class="price-num">50400</span>
+                                            <span class="price-unit">元/月</span>
+                                        </p>
+                                        <p class="time">2016年5月5日</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="right-box contact-box f_right">
+                        <h3>立即预约</h3>
+                        <form action="###" class="order-form">
+                            <p class="order-num">该商务中心近30天共有20人预约看房</p>
+                            <input type="text" class="text phone" placeholder="手机号码">
+                            <div class="vertify">
+                                <input type="text" class="text vertify-code" placeholder="验证码">
+                                <a href="###">获取验证码</a>
+                            </div>
+                            <input type="submit" class="btn" value="预约看房">
+                        </form>
+                        <div class="phone-box">
+                            <p class="title">
+                                <i class="iconfont icon-dianhua"></i>
+                                免费电话预约
+                            </p>
+                            <p class="tel">40000-40-400</p>
+                            <p class="time">( 早9:00-晚10:00 )</p>
+                        </div>
+                        <p class="collect-box">
+                            <i class="iconfont icon-xin"></i>
+                            <a href="###">收藏</a>
+                        </p>
+                    </div>
+
+                    <div class="left-box business-box f_left">
+                        <h3>商务中心简介</h3>
+                        <ul class="type">
+                            <li>
+                                <span class="title">装修风格</span>
+                                <span class="desc">时尚</span>
+                            </li>
+                            <li>
+                                <span class="title">前台</span>
+                                <span class="desc">暂无信息</span>
+                            </li>
+                            <li>
+                                <span class="title">会议室</span>
+                                <span class="desc">暂无信息</span>
+                            </li>
+                            <li>
+                                <span class="title">入驻企业</span>
+                                <span class="desc">暂无信息</span>
+                            </li>
+                        </ul>
+                        <div class="info">
+                            36 氪基地” 与氪空间一脉相承，有着同样的愿景：聚集全球最优秀的创业者。
+                            <br>                           
+                            她是以联合办公为载体的强资源创业社区，旨在为更多创业者提供更专业、系统的创业服务。
+                            <br>
+                            形式上看是 co-working space，但从创业服务能力上看，so much more than a co-working space!
+                            <br>
+                            融资服务
+                            <br>
+                            1、资源对接：与全国15家顶级投资机构合作，推荐优质项目。
+                            <br>
+                            2、机构走访：不定期投资大佬、政府机关走访，任何需求面对面0距离私聊。
+                            <br>
+                            3、投资人晚宴：大型投资人私密聚会，拓展人脉圈的绝佳机会。
+                            <br>
+                            4：FA服务：36氪FA团队专业融资顾问服务
+                            <br>
+                            5、Demo Day：面向一大波投资人的路演活动，最有效率的投融资对接
+                            <br>
+                            创业培训
+                            <br>
+                            1、氪学社：氪空间内部课程，针对入孵项目共性问题给出的系列解决方案。
+                            <br>
+                            2、KrLass：36氪创业课堂，从战略、融资、法务、产品、团队和运营六大板块解决创业公司早期问题。
+                            <br>
+                            3、公开课：36氪/氪空间/融资全平台对外品牌输出与连接公开课。
+                            <br>
+
+                        </div>
+                    </div>
+
+                    <div class="left-box desc-box f_left">
+                        <h3>所属大厦-浦项中心</h3>
+                        <div class="listing">
+                            <img src="images/listing1.jpg" alt="">
+                            <ul class="address">
+                                <li>
+                                    <span class="title">竣工时间</span>
+                                    <span>暂无信息</span>
+                                </li>
+                                <li>
+                                    <span class="title">地理位置</span>
+                                    <span><a href="##" style="color:#17a1e6">北京市朝阳区大望京科技商务园区浦项中心</a></span>
+                                </li>
+                            </ul>
+                            <ul class="type">
+                                <li>
+                                    <span class="title">层高</span>
+                                    <span class="desc">净层高：2.7米</span>
+                                </li>
+                                <li>
+                                    <span class="title">层数</span>
+                                    <span class="desc">地上33层，地下4层</span>
+                                </li>
+                                <li>
+                                    <span class="title">物业</span>
+                                    <span class="desc">知名物业公司</span>
+                                </li>
+                                <li>
+                                    <span class="title">物业费</span>
+                                    <span class="desc">暂无信息</span>
+                                </li>
+                                <li>
+                                    <span class="title">车位</span>
+                                    <span class="desc">车 位：700个地下停车位</span>
+                                </li>
+                                <li>
+                                    <span class="title">车位月租金</span>
+                                    <span class="desc">暂无信息</span>
+                                </li>
+                                <li>
+                                    <span class="title">空调</span>
+                                    <span class="desc">空调：标准层使用VAV以及变频器</span>
+                                </li>
+                                <li>
+                                    <span class="title">空调费</span>
+                                    <span class="desc">暂无信息</span>
+                                </li>
+                                <li>
+                                    <span class="title">空调开放时长</span>
+                                    <span class="desc">暂无信息</span>
+                                </li>
+                                <li>
+                                    <span class="title">电梯</span>
+                                    <span class="desc">A栋：15部，B栋：11部</span>
+                                </li>
+                                <li>
+                                    <span class="title">网络</span>
+                                    <span class="desc">电信、联通、移动</span>
+                                </li>
+                                <li>
+                                    <span class="title">入驻企业</span>
+                                    <span class="desc">暂无信息</span>
+                                </li>
+                            </ul>
+                            <div class="info">
+                                楼盘名称：浦项中心
+                                <br>
+                                开发商名称：浦项集团
+                                <br>
+                                物业管理公司：第一太平戴维斯物业管理有限公司
+                                <br>
+                                物业管理费：30元/月/㎡
+                                <br>
+                                总建筑面积：337000㎡
+                                <br>
+                                楼层：A座32+4；B座24+4
+                                <br>
+                                标准层：A座260-2136㎡；B座231-1712㎡
+                                <br>
+                                楼层净高：吊顶后净高2.8米
+                                <br>
+                                基本租期：24个月
+                                <br>
+                                电梯数量：大厦共提供26部蒂森克虏伯电梯，A座15部，B座11部
+                                <br>
+                                空调：4管制VAV中央空调
+                                <br>
+                                网络：中国移动、中国联通、中国电信
+                                <br>
+                                交付标准：白墙、网络地板
+                                <br>
+                                公共交通：步行8分钟至地铁14号线望京东站（地下1层贯通地铁站）；20余条公交路线
+                                <br>
+                                入住客户：浦项集团、美丽说、有利银行等
+                                <br>
+                                楼盘描述：
+                                <br>
+                                浦项中心位于规划中望京商务区核心区位置 ，总建筑面积约33.7万平方米，由一栋高达280米的超高层地标性建筑、两组高约150米
+                                的国际标准写字楼和一个大型购物中心组成。整个项目的核心建筑为280米的超高层地标性建筑，建筑面积约23.5万平方米，建成后
+                                将成为望京第一高楼，这一超高层建筑用途为写字楼，建成后将出租给全球一流企业办公。 两组高约150米的写字楼其中一栋建筑面
+                                积约10万平方米，是专为世界500强企业韩国浦项集团“定制”的“浦项中心”，将作为韩国浦项集团在中国区的总部基地。该项目
+                                建成后将成为北京望京区域高端的城市综合体，吸引全球一流企业入住。
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="left-box gift-box f-left">
+                        <h3>企业礼包</h3>
+                        <ul class="gift-list">
+                            <li>
+                                <div class="gift-info">
+                                    <p class="gift-price"><b>直接减免250元</b></p>
+                                    <p class="gift-title">企业互联网服务大礼包</p>
+                                    <p class="gift-desc">一起租用户可248元购建站产品</p>
+                                </div>
+                                <img src="images/gift1.jpg" alt="">
+                                </p>
+                            </li>
+                            <li>
+                                <div class="gift-info" style="background-color:#6fba2c;">
+                                    <p class="gift-price"><b>低至2元/天</b></p>
+                                    <p class="gift-title">企业办公设备租赁礼包</p>
+                                    <p class="gift-desc">免费体验一个月，专享价格，专享服务</p>
+                                </div>
+                                <img src="images/gift2.jpg" alt="">
+                                </p>
+                            </li>
+                            <li>
+                                <div class="gift-info" style="background-color:#0086a0;">
+                                    <p class="gift-price"><b>最高返现800元</b></p>
+                                    <p class="gift-title">会议场地预订服务礼包</p>
+                                    <p class="gift-desc">海量场地资源，专业会议顾问，免费提供服务</p>
+                                </div>
+                                <img src="images/gift3.jpg" alt="">
+                                </p>
+                            </li>
+                            <li>
+                                <div class="gift-info" style="background-color:#727171;">
+                                    <p class="gift-price"><b>保险60元起</b></p>
+                                    <p class="gift-title">员工专属保障+体检</p>
+                                    <p class="gift-desc">用投资的心态做保险，为企业发展保驾护航</p>
+                                </div>
+                                <img src="images/gift4.jpg" alt="">
+                                </p>
+                            </li>
+                            <li>
+                                <div class="gift-info" style="background-color:#ad1e23;">
+                                    <p class="gift-price"><b>低至7元/天 </b></p>
+                                    <p class="gift-title">企业法务全包</p>
+                                    <p class="gift-desc">一起租客户可享受10%优惠，仅需7元/天</p>
+                                </div>
+                                <img src="images/gift5.jpg" alt="">
+                                </p>
+                            </li>
+                        </ul>
+                        <p class="gift-tip">通过提交申请，即可享受所有优惠礼包。囊括企业运营，租赁配套，商务生活等多种一起租专属企业服务。</p>
+                    </div>
+
+                    <div class="left-box center-box f_left">
+                        <h3>周边商务中心</h3>
+                        <ul class="building-list">
+                            <li>
+                                 <div>
+                                    <img src="images/center1.jpg" alt="">
+                                    <p class="building-name">扬州软件园众创空间</p>
+                                    <p class="price">900 元/月</p>
+                                    <p class="distance">距离 0 米</p>
+                                 </div>
+                            </li>
+                            <li>
+                                 <div>
+                                    <img src="images/center2.jpg" alt="">
+                                    <p class="building-name">SOHO3Q-望京SOHO</p>
+                                    <p class="price">2500 元/月</p>
+                                    <p class="distance">距离 939 米</p>
+                                 </div>
+                            </li>
+                            <li>
+                                 <div>
+                                    <img src="images/center3.jpg" alt="">
+                                    <p class="building-name">D9X</p>
+                                    <p class="price">1500 元/月</p>
+                                    <p class="distance">距离 939 米</p>
+                                 </div>
+                            </li>
+                        </ul>
+                    </div> 
+
+
+                </div>
+             </div>   
+       </div>
+
+        <div class="footer">
+            <div class="keyword">
+                <div class="container">
+                    <a class="hot" href="###">热门写字楼：</a>
+                    <ul>
+                        <li><a href="###">卫通大厦</a></li>
+                        <li><a href="###">宝能中心</a></li>
+                        <li><a href="###">大恒科技大厦</a></li>
+                        <li><a href="###">方恒国际中心</a></li>
+                        <li><a href="###">诚盈中心</a></li>
+                        <li><a href="###">浦项中心</a></li>
+                        <li><a href="###">望京SOHO</a></li>
+                        <li><a href="###">SOHO3Q-望京SOHO</a></li>
+                        <li><a href="###">36氪空间</a></li>
+                        <li><a href="###">2049文创园</a></li>
+                        <li><a href="###">住邦2000</a></li>
+                        <li><a href="###">SOHO现代城</a></li>
+                        <li><a href="###">霄云中心</a></li>
+                    </ul>
+                    <a class="link" href="##">+ 展开</a>
+                </div>
+            </div>
+            <div class="content">
+                <div class="copyright f_left">
+                    <a class="logo" href="###"><img src="images/footer_logo_ddz.png" alt=""></a>
+                    <p>© 2014-2016</p>
+                    <p>网络科技有限公司</p>
+                    <p> All Rights Reserved.</p>
+                    <p class="beian">粤ICP备10000号</p>
+                    <a class="gov" href="###"><img src="images/govIcon.gif" alt="""></a>
+                </div>
+                <div class="service f_right">
+                    <p class="title">客服服务</p>
+                    <div class="info">
+                        <span class="tel">40000-40-400</span>
+                        <span>( 早9:00-晚10:00 )</span>
+                        <p>support@yiqizu.com</p>
+                        <img src="images/footer_qrcode.png" alt="">
+                    </div>
+                </div>
+                <div class="link f_right">
+                    <div class="box">
+                        <div class="top">
+                            <a href="###" class="top current">友情链接</a>
+                            <a href="###" class="top">热门办公室出租</a>
+                            <a href="###" class="top">热门写字楼出租</a>
+                            <a href="###" class="top noright">热门商务中心出租</a>
+                        </div>
+                        <div class="bottom">
+                            <a href="###">北京办公室出租</a>
+                            <a href="###">上海办公室出租</a>
+                            <a href="###">广州办公室出租</a>
+                            <a href="###">深圳办公室出租</a>
+                            <a href="###">杭州办公室出租</a>
+                            <a href="###">黄山买房</a>
+                            <a href="###">安庆房产网</a>
+                            <a href="###">温州装修网</a>
+                            <a href="###">北京租房</a>
+                            <a href="###">苏州房产网</a>
+                            <a href="###">个人房源网</a>
+                            <a href="###">海宁装修网</a>
+                            <a href="###">北京别墅</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="about f_right">
+                    <p>关于一起租</p>
+                    <a href="###">关于我们</a>
+                    <a href="###">团队招聘</a>
+                    <a href="###">商务合作</a>
+                    <a href="###">常见问题</a>
+                    <a href="###">条款与隐私</a>
+                    <a href="###">新闻资讯</a>
+                    <a href="###">网站地图</a>
+                    <a href="###">热门搜索词</a>
+                </div>                   
+            </div>
+        </div>
+    </div>
+
+    <div class="slide-bar">
+        <div class="container">
+            <div class="fav"></div>
+            <div class="line"></div>
+            <div class="weixin">
+                <div class="info">
+                    <a href=""><img src="images/qr_code.jpg" alt=""></a>
+                    <p>扫码关注一起租</p>
+                </div>
+            </div>
+            <div class="phone">
+                <div class="info">
+                    <p>客服电话 ( 早9:00-晚10:00 ) </p>
+                    <span>40000-40-400</span>
+                </div>
+            </div>
+        </div>
+        <div class="gotop"></div>
+    </div>
+
+    <div class="online">
+        <a href="###"><img src="images/contact.png" alt=""></a>
+    </div>
+</body>
+</html>
